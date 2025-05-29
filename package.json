@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@builder.io/partytown": "0.8.1",
-    "@builder.io/react-hydration-overlay": "0.0.5",
     "@clerk/nextjs": "4.28.1",
     "@planetscale/database": "1.13.0",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -97,6 +96,9 @@
     "unplugin-auto-import": "0.17.2",
     "vitest": "1.0.4",
     "zx": "7.2.3"
+  },
+  "engines": {
+    "node": "18.x"
   },
   "keywords": [
     "stripe",
