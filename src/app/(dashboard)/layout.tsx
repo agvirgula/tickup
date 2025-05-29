@@ -1,6 +1,9 @@
 import React, { PropsWithChildren } from "react";
-import DashboardHeader from "./components/DashboardHeader";
-import DashboardMain from "./components/DashboardMain";
+import dynamic from "next/dynamic";
+
+// Corrigir o caminho dos componentes
+const DashboardHeader = dynamic(() => import("./components/DashboardHeader"), { ssr: false });
+const DashboardMain = dynamic(() => import("./components/DashboardMain"), { ssr: false });
 
 const DashboardLayout: React.FC<PropsWithChildren> = async ({ children }) => {
   return (
