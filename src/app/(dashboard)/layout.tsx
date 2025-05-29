@@ -1,7 +1,8 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
+import type { PropsWithChildren } from "react";
 import dynamic from "next/dynamic";
 
-// Corrigir o caminho dos componentes
+// Importações dinâmicas sem SSR
 const DashboardHeader = dynamic(() => import("./components/DashboardHeader"), { ssr: false });
 const DashboardMain = dynamic(() => import("./components/DashboardMain"), { ssr: false });
 
