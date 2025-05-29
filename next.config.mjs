@@ -1,4 +1,3 @@
-import { withHydrationOverlay } from "@builder.io/react-hydration-overlay/next";
 import million from "million/compiler";
 import WpAutoImport from "unplugin-auto-import/webpack";
 
@@ -48,12 +47,6 @@ const pluginOptions = [
       auto: true,
     },
   },
-  {
-    id: "mismatch-hydration",
-    options: {
-      appRootSelector: "main",
-    },
-  },
 ];
 
 if (process.env.ANALYZE === "true") {
@@ -64,7 +57,6 @@ if (process.env.ANALYZE === "true") {
 }
 
 plugins.push({ id: "million", plugin: million.next });
-plugins.push({ id: "mismatch-hydration", plugin: withHydrationOverlay });
 
 export default () => {
   return plugins.reduce((acc, curr) => {
